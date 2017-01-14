@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hecaiyang.metieradesigner.MainActivity">
+    <!--app:tabTextColor="@color/white" 字体颜色
+    app:tabSelectedTextColor="@color/colorAccent"旋转字体颜色
+     app:tabIndicatorColor="@color/green"  滑块底部颜色
+     app:tabMode="scrollable"  设置导航的标题栏是可滚动的
+s设置字体大小的时候需要继承主题，并且需要自己重写主题
+    -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+
+        />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/draw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tt_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@color/colorPrimaryDark"
+                app:tabIndicatorColor="@color/green"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/green"
+                app:tabTextAppearance="@style/MyThemeTableLayout"
+                app:tabTextColor="@color/white" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clickgiveyousuprises"
+                android:id="@+id/bn_click_one"
+                />
+
+        </LinearLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_nw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:clickable="true"
+            app:headerLayout="@layout/headlayout"
+            app:itemIconTint="@color/navigation_select"
+            app:itemTextColor="@color/navigation_select"
+            app:menu="@menu/navigtion"/>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

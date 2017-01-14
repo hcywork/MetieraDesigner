@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_coodinate_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.coodinaterlayout.CoodinateLayoutActivity">
+    <!--可触摸的 android:clickable="true"-->
+    <TextView
+        android:id="@+id/tw_main_textt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#0f0"
+        android:clickable="true"
+        android:text="Hello World!"
+        android:textSize="34sp" />
+</android.support.design.widget.CoordinatorLayout>
